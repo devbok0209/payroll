@@ -6,16 +6,20 @@ group = 'org.payroll'
 version = '1.0-SNAPSHOT'
 
 repositories {
-    mavenCentral()
+    mavenCentral() // Add Maven Central repository
     maven {
-        url "https://github.com/naver/ngrinder/raw/ngrinder.maven.repo/releases"
+        url 'https://github.com/naver/ngrinder/raw/ngrinder.maven.repo/releases'
     }
 }
 
 dependencies {
-//    testImplementation platform('org.junit:junit-bom:5.9.1')
-//    testImplementation 'org.junit.jupiter:junit-jupiter'
-    implementation (group: "org.ngrinder", name: "ngrinder-groovy", version: '3.5.8')
+    implementation 'org.ngrinder:ngrinder-groovy:3.5.8'
+    implementation 'org.hamcrest:hamcrest-all:1.1'
+    implementation 'org.slf4j:slf4j-api:1.6.4'
+    implementation 'asm:asm:3.3.1'
+    implementation 'net.sf.grinder:grinder:3.9.1'
+    implementation 'commons-io:commons-io:2.0.1'
+    implementation 'commons-lang:commons-lang:2.6'
 }
 
 test {
