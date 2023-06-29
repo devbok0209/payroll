@@ -61,7 +61,7 @@ class TestRunner {
 
 	@Test
 	public void test() {
-		HTTPResponse response = request.POST("https://devcrm.bodycodi.com/api/settlement/commission/view/revenue", params)
+		HTTPResponse response = request.POST("https://devcrm.bodycodi.com/common/login?email=test2@bodycodi.com&loginPwd=123456", params)
 
 		if (response.statusCode == 301 || response.statusCode == 302) {
 			grinder.logger.warn("Warning. The response may not be correct. The response code was {}.", response.statusCode)
